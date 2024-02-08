@@ -11,7 +11,7 @@ function validateCity(city) {
 }
 
 function validatePostalCode(postalCode) {
-  return /^\d+$/.test(postalCode.trim());
+  return /^\d{5}$/.test(postalCode.trim()) && /^\d+$/.test(postalCode.trim());
 }
 
 function validatePassword(password) {

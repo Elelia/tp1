@@ -3,7 +3,6 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
@@ -189,18 +188,6 @@ export default function SignUp() {
                 />
               </Grid>
               <Grid item xs={12}>
-                {/* <TextField
-                  required
-                  id="date"
-                  label="Date de naissance"
-                  type="date"
-                  InputLabelProps={{
-                    shrink: true,
-                  }}
-                  value={formData.selectedDate}
-                  onChange={handleDateChange}
-                  renderInput={(params) => <input {...params} />}
-                /> */}
                 <LocalizationProvider 
                   dateAdapter={AdapterDayjs}>
                   <DatePicker
@@ -209,7 +196,8 @@ export default function SignUp() {
                     label="Date de naissance"
                     value={formData.selectedDate}
                     onChange={handleDateChange}
-                    renderInput={(params) => <input {...params} />} 
+                    //slotProps={{ input: {...params} }}
+                    //renderInput={(params) => <input {...params} />} 
                     error={!!formErrors.selectedDate}
                     helperText={formErrors.selectedDate}
                   />
@@ -251,7 +239,7 @@ export default function SignUp() {
               disabled={!isFormFilled()}
               sx={{ mt: 3, mb: 2, bgcolor: 'secondary.main' }}
             >
-              S'inscrire
+              Inscription
             </Button>
             <ToastContainer />
           </Box>
