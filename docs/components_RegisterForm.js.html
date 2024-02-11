@@ -1,4 +1,32 @@
-import React, { useState } from 'react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/RegisterForm.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/RegisterForm.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { useState } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -158,10 +186,10 @@ export default function RegisterForm({ onSubmit }) {
   };
 
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <Container component="main" maxWidth="xs">
-        <CssBaseline />
-        <Box
+    &lt;ThemeProvider theme={defaultTheme}>
+      &lt;Container component="main" maxWidth="xs">
+        &lt;CssBaseline />
+        &lt;Box
           sx={{
             marginTop: 8,
             display: 'flex',
@@ -169,16 +197,16 @@ export default function RegisterForm({ onSubmit }) {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <HowToRegIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5">
+          &lt;Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            &lt;HowToRegIcon />
+          &lt;/Avatar>
+          &lt;Typography component="h1" variant="h5">
             Inscrivez-vous !
-          </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmitForm} sx={{ mt: 3 }}>
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
-                <TextField
+          &lt;/Typography>
+          &lt;Box component="form" noValidate onSubmit={handleSubmitForm} sx={{ mt: 3 }}>
+            &lt;Grid container spacing={2}>
+              &lt;Grid item xs={12} sm={6}>
+                &lt;TextField
                   autoComplete="given-name"
                   name="firstName"
                   required
@@ -191,9 +219,9 @@ export default function RegisterForm({ onSubmit }) {
                   error={!!formErrors.firstName}
                   helperText={formErrors.firstName}
                 />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
+              &lt;/Grid>
+              &lt;Grid item xs={12} sm={6}>
+                &lt;TextField
                   required
                   fullWidth
                   id="lastName"
@@ -205,9 +233,9 @@ export default function RegisterForm({ onSubmit }) {
                   error={!!formErrors.lastName}
                   helperText={formErrors.lastName}
                 />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
+              &lt;/Grid>
+              &lt;Grid item xs={12}>
+                &lt;TextField
                   required
                   fullWidth
                   id="email"
@@ -219,9 +247,9 @@ export default function RegisterForm({ onSubmit }) {
                   error={!!formErrors.email}
                   helperText={formErrors.email}
                 />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
+              &lt;/Grid>
+              &lt;Grid item xs={12}>
+                &lt;TextField
                   required
                   fullWidth
                   name="password"
@@ -234,11 +262,11 @@ export default function RegisterForm({ onSubmit }) {
                   error={!!formErrors.password}
                   helperText={formErrors.password}
                 />
-              </Grid>
-              <Grid item xs={12}>
-                <LocalizationProvider 
+              &lt;/Grid>
+              &lt;Grid item xs={12}>
+                &lt;LocalizationProvider 
                   dateAdapter={AdapterDayjs}>
-                  <DatePicker
+                  &lt;DatePicker
                     required
                     fullWidth
                     label="Date de naissance"
@@ -247,14 +275,14 @@ export default function RegisterForm({ onSubmit }) {
                     onChange={handleDateChange}
                     format="DD/MM/YYYY"
                     //slotProps={{ input: {...params} }}
-                    //renderInput={(params) => <input {...params} />} 
+                    //renderInput={(params) => &lt;input {...params} />} 
                     error={!!formErrors.selectedDate}
                     helperText={formErrors.selectedDate}
                   />
-                </LocalizationProvider>
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
+                &lt;/LocalizationProvider>
+              &lt;/Grid>
+              &lt;Grid item xs={12}>
+                &lt;TextField
                   required
                   fullWidth
                   id="city"
@@ -266,9 +294,9 @@ export default function RegisterForm({ onSubmit }) {
                   error={!!formErrors.city}
                   helperText={formErrors.city}
                 />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
+              &lt;/Grid>
+              &lt;Grid item xs={12}>
+                &lt;TextField
                   required
                   fullWidth
                   id="postalCode"
@@ -280,9 +308,9 @@ export default function RegisterForm({ onSubmit }) {
                   error={!!formErrors.postalCode}
                   helperText={formErrors.postalCode}
                 />
-              </Grid>
-            </Grid>
-            <Button
+              &lt;/Grid>
+            &lt;/Grid>
+            &lt;Button
               type="submit"
               fullWidth
               variant="contained"
@@ -291,11 +319,33 @@ export default function RegisterForm({ onSubmit }) {
               sx={{ mt: 3, mb: 2, bgcolor: 'secondary.main' }}
             >
               Inscription
-            </Button>
-            <ToastContainer />
-          </Box>
-        </Box>
-      </Container>
-    </ThemeProvider>
+            &lt;/Button>
+            &lt;ToastContainer />
+          &lt;/Box>
+        &lt;/Box>
+      &lt;/Container>
+    &lt;/ThemeProvider>
   );
-}
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#validateCity">validateCity</a></li><li><a href="global.html#validateDate">validateDate</a></li><li><a href="global.html#validateEmail">validateEmail</a></li><li><a href="global.html#validateName">validateName</a></li><li><a href="global.html#validatePassword">validatePassword</a></li><li><a href="global.html#validatePostalCode">validatePostalCode</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Sun Feb 11 2024 19:07:32 GMT+0100 (heure normale d’Europe centrale)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

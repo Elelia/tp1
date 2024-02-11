@@ -1,5 +1,6 @@
 import React from 'react';
 import { validateName, validateEmail, validateCity, validatePostalCode, validatePassword, validateDate } from '../utils/validate.js';
+const dayjs = require('dayjs');
 
 describe('Validation functions', () => {
   test('validateName should return true for valid name', () => {
@@ -47,11 +48,10 @@ describe('Validation functions', () => {
   });
 
   test('validateDate should return true for valid date', () => {
-    expect(validateDate('01-01-2000')).toBe(true);
+    expect(validateDate(dayjs('01-01-2000'))).toBe(true);
   });
 
   test('validateDate should return false for invalid date', () => {
-    expect(validateDate('01-01-2020')).toBe(false);
+    expect(validateDate(dayjs('01-01-2020'))).toBe(false);
   });
-
 });
