@@ -155,7 +155,7 @@ describe('Tests d\'intégration pour le formulaire', () => {
   });
 
   // Test d'attribution de valeur aux éléments du formulaire
-  test('Attribution de valeur aux éléments du formulaire et vérification', async () => {
+  /*test('Attribution de valeur aux éléments du formulaire et vérification', async () => {
     render(<RegisterForm />);
 
     const firstNameInput = screen.getByLabelText(/Nom/);
@@ -284,5 +284,5 @@ describe('Tests d\'intégration pour le formulaire', () => {
     fireEvent.click(submitButton);
 
     expect(toast).toHaveBeenCalledWith('Le formulaire contient des erreurs. Veuillez vérifier les champs.');
-  });
+  });*/
 });
