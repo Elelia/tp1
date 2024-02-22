@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Version du Build
+La version actuelle du build est: `REACT_APP_BUILD_VERSION`.
+
+## Artifacts précédents
+- [Artifact du dernier build](lien_vers_l'artifact)
+
 ## Available Scripts
 
 In the project directory, you can run:
