@@ -44,6 +44,7 @@ jobs:
           env:
             token: ${{ secrets.CODECOV_TOKEN }}
             slug: Elelia/tp1
+            version: "v0.1.15"
     # Deploy Job
   deploy:
     # Deploy to the github-pages environment
