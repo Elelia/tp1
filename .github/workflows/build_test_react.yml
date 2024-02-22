@@ -30,6 +30,12 @@ jobs:
             npm ci
             npm run build --if-present
             npm test
+        - name: Increment version
+          run: |
+            CURRENT_VERSION=$(grep -oP '(?<=version": ")[^"]*' package.json)
+            NEW_VERSION=$(echo $CURRENT_VERSION | awk -F "." '{$NF = $NF + 1;} 1' | sed 's/ /./g')
+            sed -i "s/\"version\": \".*\"/\"version\": \"$NEW_VERSION\"/g" package.json
+            echo "New version: $NEW_VERSION"
         - name: Setup Pages
           id: pages
           uses: actions/configure-pages@v3
