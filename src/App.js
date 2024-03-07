@@ -2,7 +2,6 @@ import React from 'react';
 import RegisterForm from './components/RegisterForm';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-require("dotenv").config();
 
 export default function App() {
   const port = process.env.PORT || 8000;
@@ -21,7 +20,7 @@ export default function App() {
       }
     }
     countUsers();
-  }, []);
+  }, [port]);
 
   const handleSubmit = (formData) => {
     // Traitement de la soumission du formulaire
