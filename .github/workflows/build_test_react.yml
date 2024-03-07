@@ -36,6 +36,12 @@ jobs:
             NEW_VERSION=$(echo $CURRENT_VERSION | awk -F "." '{$NF = $NF + 1;} 1' | sed 's/ /./g')
             sed -i "s/\"version\": \".*\"/\"version\": \"$NEW_VERSION\"/g" package.json
             echo "New version: $NEW_VERSION"
+        - name: Generate build version
+          id: generate-version
+          run: |
+            # Calculate build version based on workflow and execution IDs
+            BUILD_VERSION="$(date +%Y%m%d)-${GITHUB_RUN_ID}-${GITHUB_RUN_NUMBER}"
+            echo "BUILD_VERSION=${BUILD_VERSION}" >> $GITHUB_ENV
         - name: Update README with build version
           run: node update-readme.js
           env:
