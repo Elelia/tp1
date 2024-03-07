@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 
 export default function App() {
-  const port = process.env.PORT || 3000;
+  const port = process.env.PORT || 8000;
   let [usersCount, setUsersCount] = useState(0);
 
   useEffect(() => {
